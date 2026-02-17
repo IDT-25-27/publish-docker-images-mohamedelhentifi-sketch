@@ -177,12 +177,13 @@ jobs:
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       with:
-        runners: 'check_file,check_login,check_buildx,check_build_push,check_qemu,check_metadata,check_tags,check_pr,check_dispatch,check_meta_out,check_runs_on,check_tags_pattern,check_high_score'
+        runners: 'check_file,check_login,check_buildx,check_build_push,check_stackoverflown,check_qemu,check_metadata,check_tags,check_pr,check_dispatch,check_meta_out,check_runs_on,check_tags_pattern,check_high_score'
       env:
         CHECK_FILE_RESULTS: "${{steps.check_file.outputs.result}}"
         CHECK_LOGIN_RESULTS: "${{steps.check_login.outputs.result}}"
         CHECK_BUILDX_RESULTS: "${{steps.check_buildx.outputs.result}}"
         CHECK_BUILD_PUSH_RESULTS: "${{steps.check_build_push.outputs.result}}"
+        CHECK_STACKOVERFLOWN_RESULTS: "${{steps.check_stackoverflown.outputs.result}}"
         CHECK_QEMU_RESULTS: "${{steps.check_qemu.outputs.result}}"
         CHECK_METADATA_RESULTS: "${{steps.check_metadata.outputs.result}}"
         CHECK_TAGS_RESULTS: "${{steps.check_tags.outputs.result}}"

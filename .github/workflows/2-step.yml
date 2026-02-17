@@ -138,7 +138,7 @@ jobs:
           vars: |
             step_number: 2
             results_table:
-              - description: "stackoverflown.png file found"
+              - description: "Uploaded stackoverflown.png"
                 passed: ${{ steps.check-stackoverflown.outcome == 'success' }}
               - description: "Workflow file syntax validation"
                 passed: ${{ steps.actionlint-check.outcome == 'success' }}
